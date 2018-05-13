@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+ELECTRON
+   (formerly known as Atom Shell
+is an open-source cross-platform framework for creating native applications
+        with web technologies created and maintained by GitHub
+
+
+    https://electronjs.org
+
+        Have you ever wondered if you can build cross-platform desktop apps with HTML, CSS, and JavaScript?
+        It is possible with Electron.
+        like many famous people Electron was born with a different name it was
+        born as Atom Shell because it was built for Atom but it became clear as more
+        people were using Electron that it really needed to have its own name and
+        not always be tied to the text editor Atom
+
+
+
+                   Milestones in Electron's history
+                    April 2013    Atom Shell is started
+
+                    May 2014   Atom Shell is open sourced
+
+                    April 2015    Atom Shell is re-named Electron
+
+                    May 2016   Electron releases v1.0.0
+
+                    May 2016
+        Electron apps compatible with Mac App Store
+
+                    August 2016   Windows Store support for Electron apps
+
+
+        Applications using Electron
+
+Electron has since been used to create applications by GitHub and also by such companies like Microsoft,
+Facebook, Slack, and Docker
+
+
+        Web Technologies
+     uses Chromium and Node.js to build an app with HTML, CSS, and JavaScript
+Open Source
+            open source project maintained by GitHub and an active community of contributors</p>
+
+Cross Platform compatible with Mac, Windows, and Linux
+
+
+
+        Why Electron is popular?
+        Developing desktop applications can be full
+        of challenges that make it difficult to approach.
+
+        You need to think not only about structure and desing of app,
+        but also about such thinds like packaging, installation and managing updates
+
+        Supporting multiple platforms often means
+        untangling sets of specialized tools or
+        navigating the nuances of a whole new
+        programming language.
+
+        Web apps by comparison seem so easy because
+        most everybody has a web browser
+        installed and modern browsers even come
+        loaded with powerful debugging tools.
+
+        They rely on universal cross-platform
+        languages
+
+        But even web apps have certain limitations
+
+        crafting conditional rules
+        for different browser versions
+        can be more painful than writing code
+        for different operating systems
+
+        web apps also limit your ability to interact with
+        the file system and can tend to let a
+        slow network connection throughout their performance
+
+
+        Electron uses
+        webpages for creating user interfaces
+
+        You can think of an electron app is kind
+        of a minimal web browser with the
+        ability to interact with the local file
+        system
+
+        And this web browser is part of
+        your applications packaging
+
+        In addition to its core set
+        of APIs Electron also includes all of
+        chromium APIs and all of node.js, is built
+        in modules and fully supports third
+        party modules
+
+        Electron apps are compatible with Mac, Windows, and Linux operating systems
+        right out of the box.
+
+
+
+The hard parts made easy
+Automatic updates
+
+AutoUpdater enables apps to automatically update themselves
+
+Native menus & notifications
+
+Class Menu helps to create native application menus and context menus (according style of application
+            menu Windows, Linux or macOS)
+
+Crash reporting
+
+CrashReporter submits crash reports to a remote server
+
+Debugging & profiling
+
+ContentTracing - collect tracing data from Chromium's content module for finding performance
+            bottlenecks and slow operations
+
+Chrome Developer Tools
+Devtron
+
+            Devtron - Electron DevTools Extension, an open source tool to help you inspect, monitor,
+            and debug your Electron app
+Testing
+            Spectron - Electron Testing Framework, an open source framework for easily writing
+            integrations tests for your Electron app
+            Spectron sets up and tears down your app and allows it to be test-driven remotely with full support
+            for the Electron APIs. Built on top of ChromeDriver and WebDriverIO
+
+
+Windows installers
+
+        Other in-built features are:
+        1. Automatic updates — enable apps to automatically update themselves
+        2. Native menus and notifications — creates native application menus and context menus (according style
+        of application
+        menu Windows, Linux or macOS)
+        3. App crash reporting — you can submit crash reports to a remote server
+        4. Debugging and profiling — Chromium’s content module finds performance bottlenecks and slow
+        operations. You can also use your favorite Chrome Developer Tools within your app.
+        5. Windows installer — you can create install packages. Fast and simple.
+
+
+
+how does it work?
+
+
+    A most basic Electron app would have the following folder structure
+
+            your-app/
+             ├── package.json
+             ├── main.js
+             └── index.html
+
+            A basic Electron application needs just these files:
+
+            package.json - Points to the app's main file and lists its details and dependencies.
+            main.js - Starts the app and creates a browser window to render HTML. This is the app's main
+            process.
+            index.html - A web page to render. This is the app's renderer process.
+
+
+Application's structure
+
+Main process
+runs package.json's main script:
+- displays a GUI
+- creates web pages by creating BrowserWindow instances
+Renderer process
+each webpage runs its own isolated process
+
+            An Electron app always has one main process, but never more.
+
+            The script that runs in the main process can display a GUI by creating web pages.
+
+            It creates web pages by creating BrowserWindow instances.
+
+            An Electron app always has one main process, but never more.
+            Since Electron uses Chromium for displaying web pages,
+            Chromium's multi-process architecture is also used.
+
+            Since Electron uses Chromium for displaying web pages,
+            Chromium's multi-process architecture is also used.
+
+Installing Electron
+install Node.js
+$ npm install -g electron
+$ npm install --save-dev electron
+
+            Before to begin to create an app with Electron you need to install Node.js.
+            Since an Electron app is just a fancy Node.js app, you will need to have npm installed
+
+            You also should have a GitHub account to store and update your app.
+            Although an account isn’t necessary, but it’s recommended.
+
+            npm install - This will create a node_modules folder containing all the Node.js dependencies
+            required for the app to work.
+
+running the app: $ npm start
+
+            Here, we will talk about the most essential files in any electron app.
+            Let's start with package.json, which holds various information about the project, such as the version,
+            npm dependencies and other important settings.
+
+            The most significant thing to note here is the scripts property,
+            where we've defined the npm start command, allowing us to run the app.
+            When we call it, we ask electron to run the main.js file.
+            This JS file contains a short script that opens
+            the app window, and defines some options and event handlers.
+
+            npm start - The app should open up in it's own window. Notice it has a top menu bar.
+
+            This starting the app is just the developer's way of running an Electron app.
+            When packaged for the public, the it will be installed like a normal program and opened like one,
+            just by double clicking on its icon.
+
+
+
+            const {app, BrowserWindow} = require('electron');
+            const path = require('path');
+            const url = require('url');
+
+            // Keep a global reference of the window object, if you don't, the window will
+            // be closed automatically when the JavaScript object is garbage collected.
+            let win;
+
+            function createWindow () {
+            // Create the browser window.
+            win = new BrowserWindow({width: 800, height: 600});
+
+            // and load the index.html of the app.
+            win.loadURL(url.format({
+            pathname: path.join(__dirname, 'index.html'),
+            protocol: 'file:',
+            slashes: true
+            }));
+
+            // Open the DevTools.
+            win.webContents.openDevTools()
+
+            // Emitted when the window is closed.
+            win.on('closed', () => {
+            // Dereference the window object, usually you would store windows
+            // in an array if your app supports multi windows, this is the time
+            // when you should delete the corresponding element.
+            win = null
+            })
+            }
+
+            // This method will be called when Electron has finished
+            // initialization and is ready to create browser windows.
+            // Some APIs can only be used after this event occurs.
+            app.on('ready', createWindow)
+
+            // Quit when all windows are closed.
+            app.on('window-all-closed', () => {
+            // On macOS it is common for applications and their menu bar
+            // to stay active until the user quits explicitly with Cmd + Q
+            if (process.platform !== 'darwin') {
+            app.quit()
+            }
+            })
+
+            app.on('activate', () => {
+            // On macOS it's common to re-create a window in the app when the
+            // dock icon is clicked and there are no other windows open.
+            if (win === null) {
+            createWindow()
+            }
+            })
+
+            // In this file you can include the rest of your app's specific main process
+            // code. You can also put them in separate files and require them here.
+
+
+            First we define a browser window and set it's initial size.
+            Then, we load the index.html file in it, which works similarly to opening a HTML file in your browser.
+
+
+            simple-app example
+
+            slack example
+
+Packaging and Distribution
+
+Electron Packager -> app into an executable file:
+- double click on users' machines<
+- assets, node.js modules,
+            minified WebKit browser
+
+        Separate distributions for different OS
+
+
+            To make your app ready for end users you need to package it.
+
+            Since Electron apps can work on multiple operating systems and every OS is different,
+            there need to be separate distributions for Windows, for OS X and for Linux.
+
+            All these things sum up and the final result is an app that is roughly 50mb in size.
+            This is quite a lot and isn't practical for a simple app,
+            but this becomes irrelevant to big, complex applications.
+
+
+Electron Releases
+$ npm i -D electron@latest
+# Electron 2.0.0
+# Node 8.9.3
+# Chromium 61.0.3163.100<
+
+$ npm i -D electron@beta
+# Electron 2.0.0-beta.8
+# Node 8.9.3
+# Chromium 61.0.3163.100
+
+Useful links
+Docs: https://electronjs.org/docs
+Quick-start:
+        https://github.com/electron/electron-quick-start
+Spectron: https://electronjs.org/spectron<
+Devtron: https://electronjs.org/devtron
+Community: https://electronjs.org/community<
+
+
+Thank you for your attention!
+
+        I would like to thank you and congratulate you for reaching this point!
+
+        If you liked Electron pick an idea that’s going to motivate you, init a repository and just do it.
+
+
+</body>
+</html>

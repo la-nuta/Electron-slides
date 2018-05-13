@@ -1,0 +1,516 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+    <!--<link rel="stylesheet" href="css/print/pdf.css">-->
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!--/?print-pdf#/-->
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <section data-background-image="images/bg-main.png" data-id="cover">
+        </section>
+
+        <section data-id="2">
+            <h2>Milestones in Electron's history</h2>
+
+            <p class="fragment date-item">
+                <span class="league date">
+                    April 2013
+                </span>
+                Atom Shell is started
+            </p>
+            <p class="fragment date-item">
+                <span class="league date">
+                    May 2014
+                </span>
+                Atom Shell is open sourced
+            </p>
+            <p class="fragment date-item">
+                <span class="league date">
+                    April 2015 </span>
+                Atom Shell is re-named Electron
+            </p>
+            <p class="fragment date-item">
+                <span class="league date">
+                    May 2016
+                </span>
+                Electron releases v1.0.0
+            </p>
+            <p class="fragment date-item">
+                <span class="league date">
+                    May 2016
+                </span>
+                Electron apps compatible with Mac App Store
+            </p>
+            <p class="fragment date-item">
+                <span class="league date">
+                    August 2016
+                </span>
+                Windows Store support for Electron apps
+            </p>
+            <aside class="notes">
+
+            </aside>
+        </section>
+
+        <section data-id="1">
+            <h2 class="league">ELECTRON</h2>
+            <p>(formerly known as <span class="league">Atom Shell</span>)</p>
+            <p>is an open-source cross-platform framework for creating native applications
+                with web technologies created and maintained by GitHub</p>
+
+            <p><a href="https://electronjs.org">https://electronjs.org</a></p>
+
+            <aside class="notes">
+                Have you ever wondered if you can build cross-platform desktop apps with HTML, CSS, and JavaScript?
+                It is possible with Electron.
+                Like many famous people Electron was born with a different name. It was
+                born as Atom Shell because it was built for Atom. But it became clear as more
+                people were using Electron that it really needed to have its own name and
+                not always be tied to the text editor Atom.
+            </aside>
+        </section>
+
+
+
+        <section>
+            <h2>Applications using Electron</h2>
+
+            <section data-id="3">
+                <p>Electron has since been used to create applications by <span class="league">GitHub</span>
+                    and also by such companies like <span class="league">Microsoft</span>,
+                    <span class="league">Facebook</span>, <span class="league">Slack</span>, and <span class="league">Docker</span>
+                </p>
+            </section>
+
+            <section data-id="4">
+                <ul class="apps">
+                    <li class="fragment">
+                        <img src="images/atom-icon.png" width="100" class="round">
+                        <span>Atom editor</span></li>
+                    <li class="fragment">
+                        <img src="images/github-desktop-icon.png" width="100"
+                             class="round">
+                        <span>GitHub Desktop</span>
+                    </li>
+                    <li class="fragment">
+                        <img src="images/visual-studio-code-icon.png" width="100">
+                        <span>Visual Studio Code</span>
+                    </li>
+                    <li class="fragment">
+                        <img src="images/slack-icon.png" width="100">
+                        <span>Slack</span>
+                    </li>
+                    <li class="fragment">
+                        <img src="images/skype-icon.png" width="100">
+                        <span>Skype</span>
+                    </li>
+                    <li class="fragment">
+                        <img src="images/avocode-icon-64.png" width="95" class="round">
+                        <span>Avocode</span>
+                    </li>
+                    <li class="fragment">
+                        <img src="images/whatsapp-icon-64.png" width="100">
+                        <span>WhatsApp</span>
+                    </li>
+                    <li class="fragment long">
+                        <img src="images/wordpress-com-icon.png" width="100" class="round">
+                        <span>desktop app Wordpress</span>
+                    </li>
+                    <li class="fragment short">and many, many others
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section data-id="5">
+            <h3 class="league">Web Technologies</h3>
+            <div class="fragment">
+                <p> uses Chromium and Node.js </p>
+                <p class="upper">to build an app with HTML, CSS, and JavaScript</p>
+            </div>
+            <div class="fragment">
+                <h3 class="league">Open Source</h3>
+                <p class="fragment">
+                    open source project maintained by GitHub and an active community of contributors</p>
+            </div>
+            <div class="fragment">
+                <h3 class="league">Cross Platform</h3>
+                <p class="fragment">compatible with Mac, Windows, and Linux</p>
+            </div>
+
+            <aside class="notes">
+                Why Electron is popular?
+                Developing desktop applications can be full of challenges that make it difficult to approach.
+
+                You need to think not only about structure and desing of app,
+                but also about such thinds like packaging, installation and managing updates.
+
+                Supporting multiple platforms often means untangling sets of specialized tools or
+                navigating the nuances of a whole new programming language.
+
+                Web apps by comparison seem so easy because most everybody has a web browser
+                installed and modern browsers even come loaded with powerful debugging tools.
+
+                They rely on universal cross-platform languages.
+
+                But even web apps have certain limitations.
+                Crafting conditional rules for different browser versions can be more painful than writing code
+                for different operating systems
+
+                Web apps also limit your ability to interact with the file system and can tend to let a
+                slow network connection throughout their performance.
+
+                Electron uses webpages for creating user interfaces.
+
+                You can think of an electron app is kind of a minimal web browser with the
+                ability to interact with the local file system.
+
+                And this web browser is part of your applications packaging.
+
+                Electron apps are compatible with Mac, Windows, and Linux operating systems right out of the box.
+            </aside>
+
+        </section>
+
+        <section data-id="6">
+            <h2>The hard parts made easy</h2>
+
+            <section><h3 class="league">Automatic updates</h3>
+                <p>AutoUpdater enables apps to automatically update themselves</p></section>
+
+            <section><h3 class="league">Native menus & notifications</h3>
+                <p>Class Menu helps to create native application menus and context menus (according style of application
+                    menu Windows, Linux or macOS)</p>
+            </section>
+            <section><h3 class="league">Crash reporting</h3>
+                <p>CrashReporter submits crash reports to a remote server</p>
+            </section>
+            <section><h3 class="league">Debugging & profiling</h3>
+                <p>ContentTracing - collects tracing data from Chromium's content module for finding performance
+                    bottlenecks and slow operations</p>
+                <p>Chrome Developer Tools</p>
+                <p>Devtron</p>
+
+            </section>
+
+            <section><h3 class="league">Testing</h3>
+                <p>Spectron</p>
+
+                <aside class="notes">
+                    Spectron - Electron Testing Framework, an open source framework for easily writing
+                    integrations tests for your Electron app
+                    Spectron sets up and tears down your app and allows it to be test-driven remotely with full support
+                    for the Electron APIs. Built on top of ChromeDriver and WebDriverIO
+
+                </aside>
+            </section>
+            <section><h3 class="league">Windows installers</h3></section>
+
+            <aside class="notes">
+                Other in-built features are:
+                1. Automatic updates — enable apps to automatically update themselves
+                2. Native menus and notifications — creates native application menus and context menus (according style
+                of application
+                menu Windows, Linux or macOS)
+                3. App crash reporting — you can submit crash reports to a remote server
+                4. Debugging and profiling — Chromium’s content module finds performance bottlenecks and slow
+                operations. You can also use your favorite Chrome Developer Tools within your app.
+                5. Testing — Spectron - Electron Testing Framework, an open source framework for easily writing
+                integrations tests for your Electron app. Spectron sets up and tears down your app and allows it to be test-driven remotely with full support
+                for the Electron APIs. Built on top of ChromeDriver and WebDriverIO.
+                6. Windows installer — you can create install packages. Fast and simple.
+            </aside>
+        </section>
+
+        <section>
+            <section data-id="7">
+                <h2>how does it work?</h2>
+                <img src="http://gif-kartinki.ru/abstrakcii/abstrakcii_02.gif" class="gif-img" width="700">
+            </section>
+
+            <section data-id="9">
+                <p>A most basic Electron app would have the following <span class="league">folder structure</span>:</p>
+                <div class="app-structure">
+                    <p>your-app/</p>
+                    <p> ├── package.json</p>
+                    <p> ├── main.js </p>
+                    <p> └── index.html</p>
+                </div>
+                <aside class="notes">
+                    A basic Electron application needs just these files:
+
+                    package.json - Points to the app's main file and lists its details and dependencies.
+                    main.js - Starts the app and creates a browser window to render HTML. This is the app's main
+                    process.
+                    index.html - A web page to render. This is the app's renderer process.
+                </aside>
+            </section>
+
+
+            <section data-id="11">
+                <h2>Application's structure</h2>
+                <img src="images/electron-structure.png" alt="" width="600">
+            </section>
+
+            <section data-id="">
+                <img src="images/main-renderer.png" alt="" width="300">
+                <div class="main-renderer">
+                    <p><b class="league">Main process</b></p>
+                    <p>runs package.json's main script:</p>
+                    <p class="upper start lower-font">- displays a GUI</p>
+                    <p class="upper start lower-font">- creates web pages by creating BrowserWindow instances</p>
+
+                    <p><b class="league">Renderer process</b></p>
+                    <p> each webpage runs its own isolated process </p>
+                </div>
+
+                <aside class="notes">
+                    An Electron app always has one main process, but never more.
+
+                    The script that runs in the main process can display a GUI by creating web pages.
+                    It creates web pages by creating BrowserWindow instances.
+                    An Electron app always has one main process, but never more.
+                    Since Electron uses Chromium for displaying web pages,
+                    Chromium's multi-process architecture is also used.
+                    Since Electron uses Chromium for displaying web pages,
+                    Chromium's multi-process architecture is also used.
+                </aside>
+            </section>
+
+
+            <section data-id="8">
+                <h2>Installing Electron</h2>
+                <p>install <span class="league">Node.js</span></p>
+                <p>$ npm install -g <span class="league">electron</span></p>
+                <p>$ npm install --save-dev <span class="league">electron</span></p>
+
+                <aside class="notes">
+                    Before to begin to create an app with Electron you need to install Node.js.
+                    Since an Electron app is just a fancy Node.js app, you will need to have npm installed
+
+                    You also should have a GitHub account to store and update your app.
+                    Although an account isn’t necessary, but it’s recommended.
+
+                    npm install - This will create a node_modules folder containing all the Node.js dependencies
+                    required for the app to work.
+                </aside>
+            </section>
+
+            <section data-id="">
+                <img src="images/package-json.png" width="600">
+
+                <p><span class="league">running the app</span>: $ npm start</p>
+
+                <aside class="notes">
+                    Here, we will talk about the most essential files in any electron app.
+                    Let's start with package.json, which holds various information about the project, such as the version,
+                    npm dependencies and other important settings.
+
+                    The most significant thing to note here is the scripts property,
+                    where we've defined the npm start command, allowing us to run the app.
+                    When we call it, we ask electron to run the main.js file.
+                    This JS file contains a short script that opens
+                    the app window, and defines some options and event handlers.
+
+                    npm start - The app should open up in it's own window. Notice it has a top menu bar.
+
+                    This starting the app is just the developer's way of running an Electron app.
+                    When packaged it will be installed like a normal program and opened like one,
+                    just by double clicking on its icon.
+                </aside>
+            </section>
+
+            <section data-id="">
+
+                <img src="images/html.png" width="800">
+
+                <aside class="notes">
+                    const {app, BrowserWindow} = require('electron');
+                    const path = require('path');
+                    const url = require('url');
+
+                    // Keep a global reference of the window object, if you don't, the window will
+                    // be closed automatically when the JavaScript object is garbage collected.
+                    let win;
+
+                    function createWindow () {
+                    // Create the browser window.
+                    win = new BrowserWindow({width: 800, height: 600});
+
+                    // and load the index.html of the app.
+                    win.loadURL(url.format({
+                    pathname: path.join(__dirname, 'index.html'),
+                    protocol: 'file:',
+                    slashes: true
+                    }));
+
+                    // Open the DevTools.
+                    win.webContents.openDevTools()
+
+                    // Emitted when the window is closed.
+                    win.on('closed', () => {
+                    // Dereference the window object, usually you would store windows
+                    // in an array if your app supports multi windows, this is the time
+                    // when you should delete the corresponding element.
+                    win = null
+                    })
+                    }
+
+                    // This method will be called when Electron has finished
+                    // initialization and is ready to create browser windows.
+                    // Some APIs can only be used after this event occurs.
+                    app.on('ready', createWindow)
+
+                    // Quit when all windows are closed.
+                    app.on('window-all-closed', () => {
+                    // On macOS it is common for applications and their menu bar
+                    // to stay active until the user quits explicitly with Cmd + Q
+                    if (process.platform !== 'darwin') {
+                    app.quit()
+                    }
+                    })
+
+                    app.on('activate', () => {
+                    // On macOS it's common to re-create a window in the app when the
+                    // dock icon is clicked and there are no other windows open.
+                    if (win === null) {
+                    createWindow()
+                    }
+                    })
+
+                    // In this file you can include the rest of your app's specific main process
+                    // code. You can also put them in separate files and require them here.
+                </aside>
+            </section>
+
+            <section data-id="">
+                <img src="images/main-js.png">
+                <aside class="notes">
+                    First we define a browser window and set it's initial size.
+                    Then, we load the index.html file in it, which works similarly to opening a HTML file in your browser.
+                </aside>
+            </section>
+
+            <section data-id="">
+                <img src="images/simple-app.png" height="600" class="round-corners">
+                <aside class="notes">
+                    simple-app example
+                </aside>
+            </section>
+
+            <section data-id="">
+                <img src="images/slack-app.png" height="600" class="round-corners">
+                <aside class="notes">
+                    slack example
+                </aside>
+            </section>
+            <section data-id="12">
+                <h2>Packaging and Distribution</h2>
+
+                <p><span class="league">Electron Packager</span> -> app into an executable file:</p>
+                    <p class="upper start medium-font"><span class="league">- double click</span> on users' machines</p>
+                <p class="upper start medium-font">- assets, node.js modules,
+                     minified WebKit browser</p>
+
+                <p><span class="league">Separate distributions</span> for different OS</p>
+
+                <aside class="notes">
+                    To make your app ready for end users you need to package it.
+
+                    Since Electron apps can work on multiple operating systems and every OS is different,
+                    there need to be separate distributions for Windows, for OS X and for Linux.
+
+                    All these things sum up and the final result is an app that is roughly 50mb in size.
+                    This is quite a lot and isn't practical for a simple app,
+                    but this becomes irrelevant to big, complex applications.
+                </aside>
+
+            </section>
+
+        </section>
+
+
+        <section data-id="">
+            <h2>Electron Releases</h2>
+
+            <div class="release">
+                <p><span class="league">$</span> npm i -D electron@latest</p>
+                <p><span class="league">#</span> Electron 2.0.0</p>
+                <p><span class="league">#</span> Node 8.9.3</p>
+                <p><span class="league">#</span> Chromium 61.0.3163.100</p>
+            </div>
+
+            <div class="release">
+                <p><span class="league">$</span> npm i -D electron@beta</p>
+                <p><span class="league">#</span> Electron 2.0.0-beta.8</p>
+                <p><span class="league">#</span> Node 8.9.3</p>
+                <p><span class="league">#</span> Chromium 61.0.3163.100</p>
+            </div>
+
+        </section>
+
+        <section data-id="">
+            <h2>Useful links</h2>
+            <p class="start medium-font"><a href="https://electronjs.org/docs">Docs: https://electronjs.org/docs</a></p>
+            <p class="start medium-font"><a href="https://github.com/electron/electron-quick-start">Quick-start:
+                https://github.com/electron/electron-quick-start</a></p>
+            <p class="start medium-font"><a href="https://electronjs.org/spectron">Spectron: https://electronjs.org/spectron</a></p>
+            <p class="start medium-font"><a href="https://electronjs.org/devtron">Devtron: https://electronjs.org/devtron</a></p>
+            <p class="start medium-font"><a href="https://electronjs.org/community">Community: https://electronjs.org/community</a></p>
+        </section>
+
+        <section data-id="">
+            <h2 class="league">Thank you for your attention!</h2>
+            <aside class="notes">
+                I would like to thank you and congratulate you for reaching this point!
+
+                If you liked Electron pick an idea that’s going to motivate you, init a repository and just do it.
+            </aside>
+        </section>
+
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
